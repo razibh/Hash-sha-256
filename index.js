@@ -9,7 +9,7 @@ class Block{
     }
     calculateHash(){
         return sha256( this.timestamp + JSON.stringify(this.data) + this
-        .previoushash);
+        .previoushash).toString();
     }
 }
 const block =new Block("2019-01-01", { amount: 5 }, "ABCD");
