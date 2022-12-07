@@ -12,5 +12,17 @@ class Block{
         .previoushash).toString();
     }
 }
+
+class Blockchain {
+    constructor (){
+        this.chain = [];
+}
+    addBlock(newBlock){
+    this.chain.push(newBlock);
+}
+
+}
+const josscoin = new Blockchain();
 const block =new Block("2019-01-01", { amount: 5 }, "ABCD");
-console.log(block);
+josscoin.addBlock(block);
+console.log(josscoin); 
